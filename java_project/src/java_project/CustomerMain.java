@@ -1,60 +1,22 @@
 package java_project;
-import java.util.Scanner;
 
-class Customer {
-	private String name;
-	private String address;
-	private String mobile;
-	
-	public String getname() {
-		return name;
-	}
-	
-	public void setname(String name) {
-		this.name=name;
-	}
-	
-	public String getaddress() {
-		return address;
-	}
-	
-	public void setaddress(String address) {
-		this.address=address;
-	}
-
-	public String getmobile() {
-		return mobile;
-	}
-	
-	public void setmobile(String mobile) {
-		this.mobile=mobile;
-	}
-
-	public String[] split(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-}
-
-
+import java.util.*;
 
 public class CustomerMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Customer c=new Customer();
-		Scanner sc=new Scanner(System.in);
-		String str;
-		System.out.println("Enter the deatils");
-		str = sc.nextLine();
-		String[] arrofstr = str.split(",");
-		System.out.println(java.util.Arrays.toString(arrofstr));
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the details:");
+		String[] arrofStr=scan.nextLine().split(",");
+		c.setName(arrofStr[0]);
+		c.setAddress(arrofStr[1]);
+		c.setMobile(arrofStr[2]);
 		
-		
-		//System.out.println("Customer Details");
-		//System.out.println("Name: "+c.getname());
-		//System.out.println("Address: "+c.getaddress());
-		//System.out.println("Mobile: "+c.getmobile());
+		System.out.println("Name: "+c.getName());
+		System.out.println("Address: "+c.getAddress());
+		System.out.println("Mobile: "+c.getMobile());
 
 	}
 
